@@ -1,14 +1,8 @@
 // Note: email and password values hard-coded for demo only!
 var auth = {
-    users: [
-      {
-        "email": "foobar@test.com",
-        "password": "password"
-      }
-    ],
-    authorize: function (email, password) {
-      var validUser = this.users.filter((user) => {
-        return user.email === email && user.password === password;
+    authorize: function (username, password, users) {
+      var validUser = users.filter((user) => {
+        return user.username === username && user.password === password;
       });
   
       if (validUser.length === 1) {
@@ -18,6 +12,6 @@ var auth = {
     }
   };
   
-  module.exports = {
-    auth
-  };
+module.exports = {
+  auth
+};
