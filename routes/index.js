@@ -1,3 +1,4 @@
+// These are modules that are installed from NPM and are imported into this file
 var express = require('express');
 var router = express.Router();
 
